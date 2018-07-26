@@ -48,7 +48,7 @@ public class CircleView extends android.support.v7.widget.AppCompatImageView {
         int innerCircle = getWidth() / 2 - ViewHelper.dip2px(mContext, 2);
         int ringWidth = ViewHelper.dip2px(mContext, 2);
         if (isCheck) {
-            mPaint.setColor(Color.RED);
+            mPaint.setColor(Color.parseColor(Constant.INSTANCE.getCircleCheckColor()));
         } else {
             mPaint.setColor(Color.parseColor(Constant.INSTANCE.getCircleUnCheckColor()));
         }
