@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
+import com.xiaoqianxin.xiaoqianxindialog.Constant;
 import com.xiaoqianxin.xiaoqianxindialog.R;
 import com.xiaoqianxin.xiaoqianxindialog.domain.SingleChoiceItem;
 import com.xiaoqianxin.xiaoqianxindialog.view.CircleView;
@@ -26,7 +27,7 @@ public class SingleChoiceAdapter extends BaseQuickAdapter<SingleChoiceItem, Base
     protected void convert(BaseViewHolder helper, SingleChoiceItem item) {
         helper.setText(R.id.title, item.getName());
         boolean check = item.isCheck();
-        helper.setTextColor(R.id.title, check ? Color.RED : Color.parseColor("#757575"));
+        helper.setTextColor(R.id.title, check ? Color.parseColor(Constant.INSTANCE.getCircleCheckColor()) : Color.parseColor("#757575"));
         CircleView imageView = helper.getView(R.id.icon);
         imageView.setCheck(check);
     }
