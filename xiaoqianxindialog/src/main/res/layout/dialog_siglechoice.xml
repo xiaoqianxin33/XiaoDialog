@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.xiaoqianxin.xiaoqianxindialog.view.MaxHeightLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/maxheight_layout_background"
+    android:elevation="5dp"
+    android:orientation="vertical"
+    app:maxHeight="330dp"
+    tools:ignore="UnusedAttribute">
+
+    <TextView
+        android:id="@+id/mTvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="6dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/text_color"
+        android:textSize="20sp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:scrollbarStyle="outsideOverlay"
+            android:scrollbarThumbVertical="@drawable/yoursdrawablefile"
+            android:scrollbars="vertical"/>
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/mTvCancel"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/mTvChoice"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="@string/select"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="14sp"/>
+
+    </RelativeLayout>
+
+</com.xiaoqianxin.xiaoqianxindialog.view.MaxHeightLinearLayout>
