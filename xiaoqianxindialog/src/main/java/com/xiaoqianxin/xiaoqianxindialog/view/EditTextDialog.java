@@ -53,11 +53,13 @@ public class EditTextDialog extends BaseDialog {
             public void onClick(View v) {
                 String input = mEtInput.getText().toString();
                 if (!TextUtils.isEmpty(input)) {
-                    if (mOnEditOkClickListener != null) {
+                    if (!TextUtils.isEmpty(input)) {
                         mOnEditOkClickListener.clickOk(input);
+                    } else {
+                        mOnEditOkClickListener.clickOk("");
                     }
-                    dismiss();
                 }
+                dismiss();
             }
         });
         mEtInput.postDelayed(new Runnable() {
