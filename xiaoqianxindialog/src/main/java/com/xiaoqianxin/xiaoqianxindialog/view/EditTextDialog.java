@@ -86,6 +86,9 @@ public class EditTextDialog extends BaseDialog {
         return this;
     }
 
+    public void setInputType(int type) {
+        mEtInput.setInputType(type);
+    }
 
     private void setTitle(String title) {
         if (!TextUtils.isEmpty(title)) {
